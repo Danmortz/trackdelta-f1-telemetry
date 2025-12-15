@@ -54,12 +54,12 @@ This project allows deep analysis of race and qualifying data including **gear u
 
 ## 📂 Project Structure
 
-f1-telemetry-dashboard/
+trackdelta-f1-telemetry/
 │
-├── main.py               # Main application script
-├── requirements.txt      # Python dependencies
-├── README.md             # Project documentation
-└── f1_cache/             # FastF1 local cache (auto-created)
+├── trackdelta.py        # Main application script
+├── requirements.txt     # Python dependencies
+├── README.md            # Project documentation
+└── LICENSE
 
 
 ## ⚙️ Installation
