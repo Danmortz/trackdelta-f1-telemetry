@@ -54,10 +54,62 @@ This project allows deep analysis of race and qualifying data including **gear u
 
 ## 📂 Project Structure
 
-```text
 f1-telemetry-dashboard/
 │
 ├── main.py               # Main application script
 ├── requirements.txt      # Python dependencies
 ├── README.md             # Project documentation
 └── f1_cache/             # FastF1 local cache (auto-created)
+
+
+## ⚙️ Installation
+
+This project uses Python and the FastF1 API. Follow the steps below to set it up locally.
+
+### 1️⃣ Clone the repository
+
+    git clone https://github.com/Danmortz/trackdelta-f1-telemetry.git
+    cd trackdelta-f1-telemetry
+
+### 2️⃣ Create a virtual environment (recommended)
+
+    python3 -m venv venv
+    source venv/bin/activate   # macOS / Linux
+
+### 3️⃣ Install dependencies
+
+    pip install -r requirements.txt
+
+
+## ▶️ Usage
+
+Run the main script:
+
+    python trackdelta.py
+
+You will be prompted to enter:
+
+- Season year (default: 2021)
+- Event name (e.g. Monza, Abu Dhabi, Silverstone)
+- Session type:
+  - `R`  → Race
+  - `Q`  → Qualifying
+  - `FP1`, `FP2`, `FP3` → Practice
+- Two driver codes (e.g. `VER`, `HAM`, `NOR`)
+
+### Example Input
+
+    Enter year [default 2021]: 2025
+    Enter event name [default Monza]: Abu Dhabi
+    Enter session code [default R]: R
+    Enter Driver 1 code [default VER]: VER
+    Enter Driver 2 code [default HAM]: PIA
+
+The script automatically generates:
+
+- Track gear map (fastest lap racing line)
+- Telemetry comparison (RPM, speed, throttle, brake, gear, DRS)
+- Lap time comparison across the race
+- Qualifying delta visualization vs pole
+
+
