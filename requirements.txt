@@ -1,0 +1,6 @@
+fastf1>=3.4.0
+matplotlib>=3.5.0
+numpy>=1.21
+pandas>=1.4
+timple>=0.1.8
+cycler>=0.11
