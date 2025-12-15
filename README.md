@@ -1,86 +1,63 @@
-# TrackDelta — Telemetry-Based Racing Analysis 🏁
+# F1 Telemetry & Performance Analysis Dashboard
 
-TrackDelta is a Python project that analyzes racing telemetry data to understand how a vehicle behaves around a track.  
-It focuses on visualizing speed, acceleration, braking, and gear usage to explain where time is gained or lost during a lap.
+A **Python-based Formula 1 telemetry and performance analysis tool** built using the **FastF1 API** and **Matplotlib**, designed to replicate a **broadcast-style F1 team analytics screen** inspired by Red Bull Racing and F1TV visuals.
 
-No prior knowledge of Formula 1 is required to understand the outputs.
-
----
-
-## What This Project Shows
-
-TrackDelta turns raw telemetry data into easy-to-read visual charts that help explain driving behavior on a racetrack.
-
-It answers questions like:
-- Where does the driver brake?
-- Where does the car accelerate?
-- How aggressively does the driver use gears?
-- How consistent is the pace over multiple laps?
+This project allows deep analysis of race and qualifying data including **gear usage maps, telemetry comparisons, lap time evolution, and qualifying deltas** — all presented in a clean, dark, professional dashboard theme.
 
 ---
 
-## Key Visualizations
+## 🚀 Features
 
-### Track Map (Gear Usage)
-- Displays the shape of the track using GPS data
-- Colors the racing line based on gear usage
-- Lower gears indicate tighter corners
-- Higher gears indicate fast, straight sections
+### 🗺 Track Gear Map
+- Visualizes the **fastest lap racing line**
+- Color-coded by **gear usage**
+- Auto-centered, square track layout
+- Broadcast-style HUD with fastest lap info
 
-This helps visualize how the car is driven around the circuit.
+### 📊 Telemetry Comparison (Driver vs Driver)
+- RPM
+- Speed
+- Throttle
+- Brake
+- Gear
+- DRS
+- Distance-aligned telemetry
+- Left-margin legend like F1 broadcast screens
 
----
+### ⏱ Lap Time Comparison
+- Full race lap-by-lap comparison
+- Useful for **stint consistency analysis**
 
-### Telemetry Comparison (Two Drivers)
-- Compares two drivers on the same lap
-- Shows:
-  - Engine speed (RPM)
-  - Vehicle speed
-  - Throttle input
-  - Braking input
-  - Gear selection
-  - DRS (overtaking system)
+### 🏁 Qualifying Delta Visualization
+- Fastest lap per driver vs pole
+- Team-colored bars (FastF1 team colors)
+- Delta time annotations (+ms / +s)
+- Ideal for **qualifying performance reviews**
 
-This allows side-by-side analysis of driving style and performance.
-
----
-
-### Lap Time Comparison
-- Shows how lap times change across a race
-- Helps identify:
-  - Consistent pace
-  - Pit stop laps
-  - Performance drops or improvements
-
----
-
-### Qualifying Performance Comparison
-- Compares each driver’s fastest lap against the fastest overall lap
-- Displays the time difference clearly
-- Makes it easy to see relative performance
+### 🎨 Red Bull–Inspired Analyst Theme
+- Dark telemetry dashboard aesthetic
+- Bold gridlines and axis styling
+- Cross-Matplotlib version compatibility
+- Designed for long analysis sessions
 
 ---
 
-## How the Data Is Used
+## 🛠 Tech Stack
 
-- Telemetry data is collected from FastF1, which provides official racing timing and telemetry
-- GPS coordinates are used to reconstruct the track layout
-- Telemetry signals are aligned using distance traveled along the lap
-- Missing data is safely interpolated
-- All charts are generated using Matplotlib with a clean, dark theme
-
-This project focuses on data visualization and analysis, not prediction or simulation.
+- **Python 3**
+- **FastF1** – Official F1 timing & telemetry API
+- **Matplotlib** – Visualization
+- **NumPy / Pandas** – Data processing
+- **Timple** – Time delta formatting
 
 ---
 
-## Tools & Technologies
+## 📂 Project Structure
 
-- Python
-- FastF1
-- Pandas
-- NumPy
-- Matplotlib
-
----
-
-## Project Structure
+```text
+f1-telemetry-dashboard/
+│
+├── main.py               # Main application script
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+└── f1_cache/             # FastF1 local cache (auto-created)
